@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<title>History of Tamworth Quiz</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  
+        
+<style>
+body {
+background-color: skyblue;
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: lightcyan;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: beige;
+background-image: url("img/_tamcastle.jpg");
+color: white;
+}
+
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+
+</style>
+
+
+</head>
+
+    <body>
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Tamworth%20Castle.html">Tamworth Castle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="snowdome.html">The Snowdome</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="draytonmanor.html">Drayton Manor</a>
+            </li>
+              <li>
+              <a class="nav-link" href="quiz.html">Quiz</a>
+                  </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<div id="main">
+<div id="header">
+<h1>History of Tamworth Quiz</h1>
+</div>
+<form id="form1">
+<fieldset>
+<h2>When was Tamworth Castle Bulit ?</h2>
+<label for="var_string"><input type="radio" name="variable" value="25" id="var_string" />1070</label>
+<label for="var_join"><input type="radio" name="variable" value="0" id="var_join" />1060</label>
+<label for="var_info"><input type="radio" name="variable" value="0" id="var_info" />1100</label>
+<label for="var_condition"><input type="radio" name="variable" value="0" id="var_condition"/>1200</label>
+
+<h2>Who bulit Tamworth castle?</h2>
+<label for="sub_string"><input type="radio" name="sub" value="25" id="sub_string"/>The Normans</label>
+<label for="sub_join"><input type="radio" name="sub" value="0" id="sub_join"/>The Saxons</label>
+<label for="sub_info"><input type="radio" name="sub" value="0" id="sub_info" />The Victorians </label>
+<label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />The Georgians</label>
+
+<h2>When did the last living residant live in the Castle, and what was their name?</h2>
+<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Thomas Ferrer 1437</label>
+<label for="cat_join"><input type="radio" name="con" value="0" id="cat_join" />lady Charlotte in 1714</label>
+<label for="cat_info"><input type="radio" name="con" value="25" id="cat_info" />Thomas Cooke 1867
+    
+<h2>How many furinished rooms does the Castle have?</h2>
+<label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />10</label>
+<label for="if_join"><input type="radio" name="ifstate" value="0" id="if_join" />8</label>
+<label for="if_info"><input type="radio" name="ifstate" value="0" id="if_info" />11</label>
+<label for="if_condition"><input type="radio" name="ifstate"  value="25" id="if_condition" />15</label>
+
+<button type="submit" value="Submit">Submit</button>
+</fieldset>
+</form>
+    
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       variable = parseInt(document.querySelector('input[name = "variable"]:checked').value);
+	   sub = parseInt(document.querySelector('input[name = "sub"]:checked').value);
+	   con = parseInt(document.querySelector('input[name = "con"]:checked').value);
+	   ifstate = parseInt(document.querySelector('input[name = "ifstate"]:checked').value);
+	   
+	   
+	   result = variable + sub + con + ifstate;
+	   
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+	   {score:0,feedback:"you got 0 , please try again", image: "0.jpg"},
+	   {score:25,feedback:"Well done you got 25% Try again", image: "25.jpg"},
+	   {score:50,feedback:"You got 50% Well done!", image: "50.jpg"},
+	   {score:75,feedback:"So close. Try again.", image: "75.jpg"},
+	   {score:100,feedback:"Excellent!", image: "100.jpg"}
+	   ];
+	  
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+
+
+document.getElementById("grade2").innerHTML = result2; 
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>
+</body>
+</html>
