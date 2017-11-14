@@ -309,7 +309,7 @@ card-container {
 .card .back {
   transform: rotateY(180deg);
 }
-button {
+button.22 {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
