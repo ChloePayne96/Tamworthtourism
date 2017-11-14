@@ -23,40 +23,18 @@
   </head>
 
   <body>
-      
-     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-           
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Tamworth%20Castle.html">Tamworth Castle</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="snowdome.html">The Snowdome</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="draytonmanor.html">Drayton Manor</a>
-            </li>
-              <li>
-              <a class="nav-link" href="quiz.html">Quiz</a>
-                  </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      <nav>
+    <div class="topnav" id="myTopnav">
+  <a href="#home">Home</a>
+  <a href="Tamworth Castle.html">Tamworth Castle</a>
+  <a href="#contact">Drayton Manor</a>
+  <a href="#about">The Snowdome</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
 
     </nav>
 
-    <header class="masthead" style="background-image: url('img/castle.jpg')">
+    <header class="masthead" style="background-image: url('img/Saxon%20sheild.JPG')">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
@@ -67,20 +45,7 @@
     </header>
 
     
-<div align="center">
-<marquee 
- 
-     direction="left"
-     loop="7"
-     scrollamount="1"
-     scrolldelay="2"
-     behavior="alternate"
-     width="60%"
-     bgcolor="#ff3424"
-     
-     >
-Take our Quiz!! .Take our Quiz !!. Take our Quiz !!
-</marquee>
+
     <!-- Portfolio -->
     <section id="portfolio" class="portfolio">
       <div class="container">
@@ -98,29 +63,27 @@ Take our Quiz!! .Take our Quiz !!. Take our Quiz !!
                   </a>
                 </div>
               </div>
-                  <hr class="small">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="portfolio-item">
                  
-                    <img class="img-portfolio img-fluid" src="img/the_snowdome.jpg">
-                      <h3>The Snowdome</h3>
-                    <class="rotateimg180">
-                  </a>
+              
+                  <a href="#">
+                    <img class="img-portfolio img-fluid" src="img/portfolio-2.jpg">
                   </a>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="portfolio-item">
                   <a href="#">
-                    <img class="img-portfolio img-fluid" src="img/draytonmanor.jpg">
-                      <h3>Drayton Manor</h3>
+                    <img class="img-portfolio img-fluid" src="img/portfolio-3.jpg">
                   </a>
                 </div>
               </div>
-              
+              <div class="col-md-6">
+                <div class="portfolio-item">
+                  <a href="#">
+                    <img class="img-portfolio img-fluid" src="img/portfolio-4.jpg">
+                  </a>
                 </div>
-              
+              </div>
             </div>
             
           <!-- /.col-lg-10 -->
@@ -128,27 +91,63 @@ Take our Quiz!! .Take our Quiz !!. Take our Quiz !!
         <!-- /.row -->
       </div>
       <!-- /.container -->
-    
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary text-white">
+      <div class="container text-center">
+        <h3>The buttons below are impossible to resist.</h3>
+        <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+        <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+      </div>
+    </aside>
+
+    <!-- Map -->
+    <section id="contact" class="map">
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+      <br/>
+      <small>
+        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+      </small>
+    </section>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto text-center">
-        
+            <h4>
+              <strong>Start Bootstrap</strong>
+            </h4>
+            <p>3481 Melrose Place
+              <br>Beverly Hills, CA 90210</p>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                (123) 456-7890</li>
+              <li>
+                <i class="fa fa-envelope-o fa-fw"></i>
+                <a href="mailto:name@example.com">name@example.com</a>
+              </li>
+            </ul>
             <br>
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="https://github.com/ChloePayne96/Tamworthtourism">
-                  <i class="fa fa-github fa-fw fa-3x"></i>
+                <a href="#">
+                  <i class="fa fa-facebook fa-fw fa-3x"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://twitter.com/chloepayne5">
+                <a href="#">
                   <i class="fa fa-twitter fa-fw fa-3x"></i>
                 </a>
               </li>
-              
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-dribbble fa-fw fa-3x"></i>
+                </a>
+              </li>
+            </ul>
             <hr class="small">
             <p class="text-muted">Copyright &copy; Your Website 2017</p>
           </div>
