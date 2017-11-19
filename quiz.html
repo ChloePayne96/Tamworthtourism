@@ -122,9 +122,9 @@ margin-top: 20px;
 <label for="sub_condition"><input type="radio" name="sub" value="0" id="sub_condition" />The Georgians</label>
 
 <h2>When did the last living residant live in the Castle, and what was their name?</h2>
-<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Thomas Ferrer in 1437</label>
+<label for="cat_string"><input type="radio" name="con" value="0" id="cat_string" />Thomas Ferrer 1437</label>
 <label for="cat_join"><input type="radio" name="con" value="0" id="cat_join" />lady Charlotte in 1714</label>
-<label for="cat_info"><input type="radio" name="con" value="25" id="cat_info" />Thomas Cooke in 1867
+<label for="cat_info"><input type="radio" name="con" value="25" id="cat_info" />Thomas Cooke 1867
     
 <h2>How many furinished rooms does the Castle have?</h2>
 <label for="if_string"><input type="radio" name="ifstate" value="0" id="if_string" />10</label>
@@ -154,21 +154,18 @@ document.getElementById("form1").onsubmit=function() {
 	document.getElementById("grade").innerHTML = result;
 
  grading = [
-	   {score:0,feedback:"you got 0 , please try again",},
-	   {score:25,feedback:"Well done you got 25% Try again", },
-	   {score:50,feedback:"You got 50% Well done!,"},
-	   {score:75,feedback:"So close. Try again.",},
-	   {score:100,feedback:"Excellent!", image:}
+	   {score:0,feedback:"you got 0 , please try again", image: "0.jpg"},
+	   {score:25,feedback:"Well done you got 25% Try again", image: "25.jpg"},
+	   {score:50,feedback:"You got 50% Well done!", image: "50.jpg"},
+	   {score:75,feedback:"So close. Try again.", image: "75.jpg"},
+	   {score:100,feedback:"Excellent!", image: "100.jpg"}
 	   ];
 	  
 for(i=0; i<grading.length; i++) {
     if(result == grading[i].score) {
-	    if(result == grading[i].score) {
     result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
 	  }
 	  }
-   
-	 
 
 
 document.getElementById("grade2").innerHTML = result2; 
